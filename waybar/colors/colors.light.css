@@ -1,0 +1,14 @@
+/* BLUEINK light color theme */
+
+@define-color module-bg     rgba(230, 222, 213, 0.85); /* #e6ded5 with oppacity  */
+@define-color module-bg-shadow #D4C9BC;
+@define-color tooltip-bg    rgba(230, 222, 213, 0.98);
+@define-color inactive      #6C7AA0;
+@define-color fg            #022164;
+@define-color workspace-fg  @fg;
+@define-color highlight     #D4C9BC;
+
+@define-color red           #010B22;
+@define-color blue          #022164;
+@define-color yellow        #1C3773;
+@define-color green         #516491;

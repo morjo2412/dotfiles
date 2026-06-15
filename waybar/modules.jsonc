@@ -1,0 +1,233 @@
+{
+    "niri/workspaces": {
+        "format": "{icon}",
+        "hide-empty": true,
+		"format-icons": {
+            "active": "",   
+            "default": "",  
+            "empty": "󱉟"   
+        }
+     },
+
+    "tray": {
+        "icon-size": 13,
+        "spacing": 12
+    },
+
+    "battery": {
+        "interval": 20,
+        "format": "<span font='20'>{icon}</span> <span rise='4000'>{capacity}%</span>",
+        "format-charging": " {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "states": {
+            "warning": 30,
+            "critical": 15
+        }
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "weeks-pos": "right",
+            "mode-mon-col": 3,
+            "format": {
+                "months":     "<span color='#010b22'><b>{}</b></span>",
+                "days":       "<span color='#022164'>{}</span>",
+                "weeks":      "<span color='#516491'><b>W{}</b></span>",
+                "weekdays":   "<span color='#010b22'><b>{}</b></span>",
+                "today":      "<span bgcolor='#022164' color='#e6ded5'><b> {} </b></span>"
+            },
+        },
+        "actions":  {
+                    "on-click": "mode",
+                    "on-click-right": "shift_reset",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down",
+                    
+                    }
+    },
+
+    "network": {
+        "interval": 10,
+        "format-disabled": "<span font='20'>󰖪</span>",
+        "format-disconnected": "<span font='20'>󱚼</span>",
+        "format-wifi": "<span font='20'></span>",
+        "format-ethernet": "<span font='20'></span>",
+        "tooltip-format": "{essid} ({signalStrength}%)",
+        "on-click-right": "kitty -e nmtui"
+    },
+
+    "bluetooth": {
+        "format": "{}",
+        "format-on": "<span font='20'>󰂱</span>",
+        "format-off": "<span font='20'>󰂲</span>",
+        "format-disabled": "<span font='18'>󰂳</span>",
+        "format-connected": "<span font='18'>󰂱</span> <span rise='4000'>{device_alias}</span>",
+        "max-length": 13,
+        "tooltip-format": "{controller_alias}\n{num_connections} connected\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": " {device_alias}",
+        "tooltip-format-enumerate-connected": " {device_alias} 󰥉 {device_battery_percentage}%",
+        "on-click-right": "kitty -e bluetui"
+    },
+
+    "pulseaudio": {
+        "format": "<span font='20'>{icon}</span>",
+        "tooltip-format": "{volume}%",
+        "format-muted": "<span font='20'>󰝟</span>",
+        "scroll-step": 2,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-right": "kitty -e pulsemixer",
+        "format-icons": {
+            "default": ["", "", ""]
+        }
+    },
+
+    "pulseaudio/slider": {
+        "min": 0,
+        "max": 100,
+        "cursor": true
+    },
+
+    "backlight": {
+        "scroll-step": 2,
+        "format": "<span font='20'>{icon}</span>",
+        "tooltip-format": "{percent}%",
+        "format-icons": [ "󰃞", "󰃝", "󰃟", "󰃠" ]
+    },
+
+    "backlight/slider": {
+        "min": 5,
+        "max": 100,
+        "cursor": true
+    },
+
+    "group/group-volume": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 600,
+            "transition-left-to-right": true,
+            "reveal-delay": 450
+        },
+        "modules": ["pulseaudio", "pulseaudio/slider"]
+    },
+
+    "group/group-backlight": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 600,
+            "transition-left-to-right": true,
+            "reveal-delay": 450
+        },
+        "modules": ["backlight", "backlight/slider"]
+    },
+
+    "custom/system": {
+        "format": "<span font='20'>󰍜 </span>",
+        "on-click-right": "kitty -e btop",
+        "tooltip": false
+    },
+
+    "cpu": {
+        "interval": 5,
+        "format": "<span font='20'></span>  <span rise='4000'>{usage}%</span>",
+        "states": {
+            "warning": 80,
+            "critical": 90
+        }
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "<span font='20'></span> <span rise='4000'>{used:0.1f}G/{total:0.1f}G</span>",
+        "states": {
+            "warning": 80,
+            "critical": 90
+        }
+    },
+
+    "temperature": {
+        "interval": 5,
+        "format": "{icon} {temperatureC}°",
+        "critical-threshold": 90,
+        "format-icons": ["","","","",""]    
+    },
+
+    "group/hardware": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 500,
+            "transition-left-to-right": false,
+            "click-to-reveal": false
+        },
+        "modules": ["custom/system", "cpu", "memory", "temperature"]
+    },
+
+    "mpris": {
+            "format": "{player_icon} {title}",
+            "format-paused": "{status_icon} <i>{title}</i>",
+            "max-length": 40,
+            "player-icons": {
+                "default": "▶ "
+            },
+            "status-icons": {
+                "paused": "󰏤 "
+            },
+            "on-click": "playerctl play-pause",
+            "on-scroll-up": "playerctl next",
+            "on-scroll-down": "playerctl previous"
+        },
+        
+    "custom/power": {
+            "format": " ⏻ ",
+            "tooltip": false,
+            "on-click": "systemctl poweroff"
+        },
+    
+        "custom/reboot": {
+            "format": "<span font='20'> 󰑓 </span>",
+			"tooltip-format": "Reboot",             
+            "on-click": "systemctl reboot"
+        },
+    
+        "custom/suspend": {
+            "format": " 󰤄 ",
+            "tooltip-format": "Suspend",
+            "on-click": "systemctl suspend"
+        },
+    
+        "custom/lock": {
+            "format": " 󰌾 ",
+            "tooltip-format": "Lock",
+            "on-click": "swaylock -c 022164" 
+        },
+    
+        "custom/logout": {
+            "format": " 󰍃 ",
+            "tooltip-format": "Close niri",
+            "on-click": "niri msg action quit"
+        },
+    
+        "group/power": {
+            "orientation": "horizontal",
+            "drawer": {
+                "transition-duration": 500,
+                "transition-left-to-right": false,
+                "click-to-reveal": false
+            },
+            "modules": [
+                "custom/power", 
+                "custom/reboot", 
+                "custom/suspend", 
+                "custom/lock", 
+                "custom/logout"
+            ]
+        },
+
+        "custom/separator": {
+                "format": "",
+                "tooltip": false
+            },
+        
+}

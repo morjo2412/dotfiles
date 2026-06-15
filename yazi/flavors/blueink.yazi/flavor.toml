@@ -1,0 +1,307 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+# : App {{{
+
+[app]
+overall = { bg = "#E6DED5" }
+
+# : }}}
+
+
+# : Manager {{{
+
+[mgr]
+cwd = { fg = "#022164", underline = true }
+
+# Find
+find_keyword  = { fg = "#010B22", bold = true, italic = true }
+find_position = { fg = "#1C3773", bg = "reset", bold = true, italic = true }
+find_symbol = "   "
+
+# Symlink
+symlink_target = { fg = "#022164", underline = true }
+
+# Marker
+marker_copied   = { fg = "#E6DED5", bg = "#022164" }
+marker_cut      = { fg = "#E6DED5", bg = "#010B22" }
+marker_marked   = { fg = "#E6DED5", bg = "#1C3773" }
+marker_selected = { fg = "#E6DED5", bg = "#1C3773" }
+
+# Count
+count_copied   = { fg = "#E6DED5", bg = "#022164" }
+count_cut      = { fg = "#E6DED5", bg = "#010B22" }
+count_selected = { fg = "#E6DED5", bg = "#1C3773" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#D4C9BC" }
+
+# Highlighting
+syntect_theme = ""
+
+# : }}}
+
+
+# : Tabs {{{
+
+[tabs]
+active   = { fg = "#E6DED5", bg = "#022164", bold = true }
+inactive = { fg = "#6C7AA0", bg = "#D4C9BC" }
+
+# : }}}
+
+
+# : Mode (¡Esta era la sección faltante que rompió tu barra!) {{{
+
+[mode]
+# Bloque principal (ej. "NOR")
+normal_main = { fg = "#E6DED5", bg = "#022164", bold = true }
+# Bloque secundario (ej. el tamaño del archivo en la barra)
+normal_alt  = { fg = "#022164", bg = "#D4C9BC", bold = true }
+
+# Select mode
+select_main = { fg = "#E6DED5", bg = "#1C3773", bold = true }
+select_alt  = { fg = "#022164", bg = "#D4C9BC", bold = true }
+
+# Unset mode
+unset_main = { fg = "#E6DED5", bg = "#010B22", bold = true }
+unset_alt  = { fg = "#022164", bg = "#D4C9BC", bold = true }
+
+# : }}}
+
+
+# : Indicator of hovered file {{{
+
+[indicator]
+parent  = { bg = "#D4C9BC" }
+current = { bg = "#D4C9BC", fg = "#022164", bold = true }
+preview = { bg = "#D4C9BC" }
+padding = { open = "", close = "" }
+
+# : }}}
+
+
+# : Status bar {{{
+
+[status]
+overall         = { bg = "#E6DED5" }
+separator_open  = ""
+separator_close = ""
+separator_style = { fg = "#022164", bg = "#E6DED5" }
+
+# Permissions
+perm_sep   = { fg = "#6C7AA0" }
+perm_type  = { fg = "#022164", bold = true }
+perm_read  = { fg = "#516491" }
+perm_write = { fg = "#1C3773" }
+perm_exec  = { fg = "#010B22", bold = true }
+
+# Progress
+progress_label  = { fg = "#022164", bold = true }
+progress_normal = { fg = "#022164", bg = "#D4C9BC" }
+progress_error  = { fg = "#a63333", bg = "#D4C9BC" }
+# : }}}
+
+
+# : Which {{{
+
+[which]
+cols            = 3
+mask            = { bg = "#E6DED5" }
+cand            = { fg = "#022164" }
+rest            = { fg = "#6C7AA0" }
+desc            = { fg = "#1C3773" }
+separator       = "  "
+separator_style = { fg = "#D4C9BC" }
+
+# : }}}
+
+
+# : Confirmation {{{
+
+[confirm]
+border     = { fg = "#D4C9BC" }
+title      = { fg = "#010B22", bold = true, italic = true }
+body       = { fg = "#022164" }
+list       = { fg = "#022164" }
+btn_yes    = { fg = "#E6DED5", bg = "#010B22", bold = true }
+btn_no     = { fg = "#022164", bg = "#D4C9BC", bold = true }
+btn_labels = [ "  [y]es  ", "  (n)o  " ]
+
+# : }}}
+
+
+# : Spotter {{{
+
+[spot]
+border = { fg = "#D4C9BC" }
+title  = { fg = "#022164", bold = true }
+
+# Table
+tbl_col  = { fg = "#022164" }
+tbl_cell = { fg = "#E6DED5", bg = "#1C3773", bold = true }
+
+# : }}}
+
+
+# : Notification {{{
+
+[notify]
+title_info  = { fg = "#022164", bold = true }
+title_warn  = { fg = "#1C3773", bold = true, underline = true }
+title_error = { fg = "#010B22", bold = true, italic = true }
+
+# Icons
+icon_info  = ""
+icon_warn  = ""
+icon_error = ""
+
+# : }}}
+
+
+# : Picker {{{
+
+[pick]
+border   = { fg = "#D4C9BC" }
+active   = { fg = "#1C3773", bold = true }
+inactive = { fg = "#6C7AA0" }
+
+# : }}}
+
+
+# : Input {{{
+
+[input]
+border   = { fg = "#022164" }
+title    = { fg = "#010B22", bold = true }
+value    = { fg = "#022164" }
+selected = { reversed = true }
+
+# : }}}
+
+
+# : Completion {{{
+
+[cmp]
+border   = { fg = "#D4C9BC" }
+active   = { bg = "#022164", fg = "#E6DED5", bold = true }
+inactive = { fg = "#6C7AA0" }
+
+# Icons
+icon_file    = ""
+icon_folder  = ""
+icon_command = ""
+
+# : }}}
+
+
+# : Task manager {{{
+
+[tasks]
+border  = { fg = "#D4C9BC" }
+title   = { fg = "#010B22", bold = true }
+hovered = { bg = "#D4C9BC", fg = "#022164", bold = true }
+
+# : }}}
+
+
+# : Help menu {{{
+
+[help]
+on      = { fg = "#022164", bold = true }
+run     = { fg = "#1C3773" }
+desc    = { fg = "#516491" }
+hovered = { bg = "#D4C9BC", bold = true }
+footer  = { fg = "#E6DED5", bg = "#022164" }
+
+# : }}}
+
+
+# : File-specific styles {{{
+[filetype]
+rules = [
+  # Images / Media
+  { mime = "image/*", fg = "#516491", italic = true },
+  { mime = "{audio,video}/*", fg = "#516491", italic = true },
+
+  # Archives
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#1C3773" },
+  { mime = "inode/empty", fg = "#6C7AA0", italic = true },
+  
+  # Documents
+  { mime = "application/{pdf,doc,rtf}", fg = "#022164" },
+
+  # Special files
+  { url = "*", is = "orphan", fg = "#010B22", bg = "#D4C9BC", bold = true, italic = true },
+  { url = "*", is = "exec", fg = "#010B22", bold = true },
+
+  # --- CONFIGURACIÓN DEL TEXTO DE LAS CARPETAS ---
+  # Sobrescribimos el color del texto para los directorios estándar del sistema
+  { url = "**/Desktop/", fg = "#022164", bold = true },
+  { url = "**/Downloads/", fg = "#022164", bold = true },
+  { url = "**/Documents/", fg = "#022164", bold = true },
+  { url = "**/Music/", fg = "#022164", bold = true },
+  { url = "**/Pictures/", fg = "#022164", bold = true },
+  { url = "**/Videos/", fg = "#022164", bold = true },
+  { url = "**/.config/", fg = "#022164", bold = true },
+
+  # Fallback general para cualquier otra carpeta
+  { url = "*/", fg = "#022164", bold = true },
+  
+  # Fallback para archivos normales
+  { url = "*", fg = "#022164" },
+]
+
+# Icons
+[icon]
+# Regla general para iconos: Si es directorio, usa la carpeta cerrada
+prepend_conds = [{ if = "dir", text = "", fg = "#022164" }]
+
+prepend_globs = [
+  # Media / Images (Tinta lavada - Abstracción de contexto)
+  { url = "*.{jpg,jpeg,png,gif,webp,svg,bmp,ico,tiff,heic}", text = "", fg = "#516491" },
+  { url = "*.{mp4,mkv,mov,avi,webm,flv,wmv,mpeg}", text = "", fg = "#516491" },
+  { url = "*.{mp3,flac,wav,m4a,ogg,opus,aac,wma}", text = "", fg = "#516491" },
+  
+  # Archives (Tinta media - Estados intermedios)
+  { url = "*.{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", text = "", fg = "#1C3773" },
+]
+
+# --- CONFIGURACIÓN DE LOS GLIFOS DE LAS CARPETAS ---
+# Mapeamos los glifos especiales a tu color base
+dirs = [
+  { name = ".cache",     text = "", fg = "#022164" },
+  { name = ".config",    text = "", fg = "#022164" },
+  { name = ".git",       text = "", fg = "#022164" },
+  { name = ".local",     text = "", fg = "#022164" },
+  { name = "Desktop",    text = "", fg = "#022164" },
+  { name = "Development",text = "", fg = "#022164" },
+  { name = "Documents",  text = "", fg = "#022164" },
+  { name = "Downloads",  text = "", fg = "#022164" },
+  { name = "Music",      text = "", fg = "#022164" },
+  { name = "Pictures",   text = "", fg = "#022164" },
+  { name = "Projects",   text = "", fg = "#022164" },
+  { name = "Templates",  text = "", fg = "#022164" },
+  { name = "Videos",     text = "", fg = "#022164" },
+
+  # Directorios raíz de Unix
+  { name = "bin",        text = "", fg = "#022164" },
+  { name = "boot",       text = "", fg = "#022164" },
+  { name = "dev",        text = "", fg = "#022164" },
+  { name = "etc",        text = "", fg = "#022164" }, 
+  { name = "home",       text = "", fg = "#022164" },
+  { name = "lib",        text = "", fg = "#022164" },
+  { name = "lib64",      text = "", fg = "#022164" },
+  { name = "mnt",        text = "", fg = "#022164" },
+  { name = "opt",        text = "", fg = "#022164" },
+  { name = "proc",       text = "", fg = "#022164" },
+  { name = "root",       text = "", fg = "#022164" }, 
+  { name = "run",        text = "", fg = "#022164" },
+  { name = "sbin",       text = "", fg = "#022164" },
+  { name = "srv",        text = "", fg = "#022164" },
+  { name = "sys",        text = "", fg = "#022164" },
+  { name = "tmp",        text = "", fg = "#022164" }, 
+  { name = "usr",        text = "", fg = "#022164" },
+  { name = "var",        text = "", fg = "#022164" }
+]
+# : }}}

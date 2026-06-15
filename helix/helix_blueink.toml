@@ -1,0 +1,62 @@
+# ==========================================
+# Helix Theme: blueink (Semantic Duotone)
+# ==========================================
+
+# 1. User Interface (UI) - Mandatory Scopes
+"ui.background"         = { bg = "paper" }
+"ui.text"               = { fg = "ink_base" }
+"ui.cursor"             = { fg = "paper", bg = "ink_base" }
+"ui.cursor.primary"     = { fg = "paper", bg = "ink_base" }
+"ui.cursor.match"       = { fg = "ink_heavy", modifiers = ["underlined"] }
+"ui.selection"          = { bg = "paper_shadow" }
+"ui.selection.primary"  = { bg = "paper_shadow" }
+"ui.linenr"             = { fg = "ink_very_washed" }
+"ui.linenr.selected"    = { fg = "ink_base", modifiers = ["bold"] }
+"ui.statusline"         = { fg = "paper", bg = "ink_base" }
+"ui.menu"               = { fg = "ink_base", bg = "paper_shadow" }
+"ui.menu.selected"      = { fg = "paper", bg = "ink_base" }
+"ui.popup"              = { bg = "paper", fg = "ink_base" }
+"ui.window"             = { fg = "paper_shadow" }
+"ui.help"               = { fg = "ink_base", bg = "paper_shadow" }
+
+# 2. Base Diagnostics (Required by linter)
+"warning" = "ink_mid"
+"error"   = "ink_heavy"
+"info"    = "ink_washed"
+"hint"    = "ink_very_washed"
+
+# 3. Standard Syntax
+"variable"           = { fg = "ink_base" }
+"type"               = { fg = "ink_base" }
+"operator"           = { fg = "ink_base" }
+
+# 4. Structural Anchors (Bold)
+"keyword"            = { fg = "ink_base", modifiers = ["bold"] }
+"keyword.control"    = { fg = "ink_base", modifiers = ["bold"] }
+"function"           = { fg = "ink_base", modifiers = ["bold"] }
+"constructor"        = { fg = "ink_base", modifiers = ["bold"] }
+
+# 5. Data & Secondary Context (Italic)
+"string"             = { fg = "ink_washed", modifiers = ["italic"] }
+"comment"            = { fg = "ink_very_washed", modifiers = ["italic"] }
+"comment.line"       = { fg = "ink_very_washed", modifiers = ["italic"] }
+
+# 6. Control Flow & Critical Breakpoints (Bold Italic)
+"keyword.control.return" = { fg = "ink_heavy", modifiers = ["bold", "italic"] }
+"special"                = { fg = "ink_heavy", modifiers = ["bold", "italic"] }
+
+# 7. Compiler Diagnostics Details
+"diagnostic.error"   = { fg = "ink_heavy", modifiers = ["bold"] }
+"diagnostic.warning" = { fg = "ink_mid", modifiers = ["underlined"] }
+
+# ==========================================
+# 8. Palette Definition (MUST BE AT THE BOTTOM)
+# ==========================================
+[palette]
+paper          = "#E6DED5"
+paper_shadow   = "#D4C9BC"
+ink_base       = "#022164"
+ink_heavy      = "#010B22"
+ink_washed     = "#364D82"
+ink_very_washed = "#6C7AA0"
+ink_mid        = "#1C3773"

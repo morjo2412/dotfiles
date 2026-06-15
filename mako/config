@@ -1,0 +1,52 @@
+sort=-time
+layer=overlay
+
+# --- Comportamiento del Ratón ---
+on-button-left=dismiss        
+on-button-right=dismiss-all   
+on-button-middle=invoke-default-action
+
+# Fondo con transparencia (~90% opacidad)
+background-color=#E6DED599
+text-color=#022164
+width=300
+height=110
+
+# Bordes y diseño
+border-size=2
+border-color=#D4C9BC
+border-radius=15
+margin=10
+padding=15
+
+# Iconos y comportamiento
+icons=0
+max-icon-size=64
+max-visible=3
+
+# Desaparición automática (5 segundos)
+default-timeout=5000
+ignore-timeout=0
+
+# Fuente más pequeña
+font=monospace 10
+
+# --- Niveles de Urgencia ---
+
+[urgency=low]
+border-color=#6C7AA0
+text-color=#516491
+
+[urgency=normal]
+border-color=#022164
+
+[urgency=high]
+border-color=#a63333
+text-color=#a63333
+default-timeout=0
+
+# --- Categorías Específicas ---
+
+[category=mpd]
+default-timeout=2000
+group-by=category

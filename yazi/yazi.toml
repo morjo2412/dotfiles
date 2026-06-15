@@ -1,0 +1,56 @@
+[opener]
+edit_helix = [
+  { run = 'kitty -e helix "%s"', orphan = true, desc = "Helix" }
+]
+edit_micro = [
+  { run = 'kitty -e micro "%s"', orphan = true, desc = "Micro" }
+]
+open_document = [
+  { run = 'zathura "$1"', orphan = true, desc = "Zathura" }
+]
+open_media = [
+  { run = 'mpv "$1"', orphan = true, desc = "MPV" }
+]
+open_image = [
+  { run = 'imv "$1"', orphan = true, desc = "IMV" }
+]
+unmount_disk = [
+	{ run = 'udiskie-umount "%s1"', block = true, desc = "Unmount Disk" }
+]
+mount_disks = [
+	{ run = 'kitty --title "mount_disks" -e ~/.config/dotfiles/yazi/list_mount_disks.sh', orphan = true, desc = "Mount Disks" }
+]
+open_terminal = [
+	{ run = 'kitty --directory "%s1"', orphan = true, desc = "Open terminal here" }
+]
+compress_tar = [
+	{ run = 'tar -I "zstd -T0" -cvf "%s1.tar.zst" "%s1"', block = true, desc = "Compress (tar.zst)" }
+]
+open_lazygit = [
+  { run = 'kitty --title "LazyGit" --directory "%s1" -e lazygit', orphan = true, desc = "LazyGit" }
+]
+analyze_disk = [
+  { run = 'kitty --title "Disk Usage (Dust)" --hold -e dust "%s1"', orphan = true, desc = "Analizar Espacio (dust)" }
+]
+edit = [
+  { run = 'kitty --title "Helix Workspace" --directory "%s1" -e helix .', orphan = true, desc = "Edit Proyect (Helix)" }
+]
+
+[open]
+prepend_rules = [
+  { url = "*/", use = [ "edit" , "open_terminal","open_lazygit","analize_disk", "mount_disks", "unmount_disk", "compress_tar"] },  
+
+  # 2. Reglas para archivos específicos
+  { mime = "application/pdf", use = [ "open_document" ] },
+  { mime = "application/epub+zip", use = [ "open_document" ] },
+  { mime = "video/*", use = [ "open_media" ] },
+  { mime = "audio/*", use = [ "open_media" ] },
+  { mime = "image/*", use = [ "open_image" ] },
+  { mime = "text/*", use = [ "edit_helix", "edit_micro" ] },
+  { mime = "application/json", use = [ "edit_helix", "edit_micro" ] },
+  { mime = "inode/empty", use = [ "edit_helix", "edit_micro" ] }
+]
+
+append_rules = [
+  { url = "*", use = [ "edit_helix", "edit_micro" ] }
+]

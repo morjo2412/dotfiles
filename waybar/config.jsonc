@@ -1,0 +1,34 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin": "2 10 0 10",
+    
+    
+    "modules-left": [
+        "niri/workspaces",
+        "mpris"
+    ],
+    
+    "modules-center": [
+        "clock"
+    ],
+    
+    "modules-right": [
+        "group/hardware",
+        "custom/separator",
+        "network", 
+        "custom/separator",
+        "bluetooth", 
+        "custom/separator",
+        "group/group-volume", 
+        "custom/separator",
+        "group/group-backlight", 
+        "custom/separator",
+        "battery",
+        "custom/separator",
+        "group/power",
+        "tray"
+    ],
+
+    "include": [ "~/.config/dotfiles/waybar/modules.jsonc" ]
+}

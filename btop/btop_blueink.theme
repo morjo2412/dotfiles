@@ -1,0 +1,67 @@
+
+# ==========================================
+# btop Theme: blueink (Terrapunk / Imprenta)
+# ==========================================
+
+# Fondo transparente para heredar el de Kitty
+theme[main_bg]=""
+
+# Textos base y títulos
+theme[main_fg]="#022164"
+theme[title]="#010B22"
+theme[hi_fg]="#364D82"
+
+# Selección de procesos (Estilo Helix Invertido)
+theme[selected_bg]="#D4C9BC"
+theme[selected_fg]="#010B22"
+
+# Bordes inactivos (Tinta muy lavada para no saturar)
+theme[inactive_fg]="#6C7AA0"
+theme[cpu_box]="#6C7AA0"
+theme[mem_box]="#6C7AA0"
+theme[net_box]="#6C7AA0"
+theme[proc_box]="#6C7AA0"
+theme[div_line]="#6C7AA0"
+
+# Textos sobre gráficas
+theme[graph_text]="#022164"
+theme[proc_misc]="#364D82"
+
+# ==========================================
+# Gráficas (Degradados de Tinta Lavada a Base)
+# ==========================================
+
+# CPU y Temperaturas
+theme[cpu_start]="#516491"
+theme[cpu_mid]="#1C3773"
+theme[cpu_end]="#010B22"
+theme[temp_start]="#516491"
+theme[temp_mid]="#1C3773"
+theme[temp_end]="#010B22"
+
+# Memoria (Libre vs Usada)
+theme[free_start]="#516491"
+theme[free_mid]="#516491"
+theme[free_end]="#516491"
+theme[used_start]="#022164"
+theme[used_mid]="#022164"
+theme[used_end]="#022164"
+theme[cached_start]="#1C3773"
+theme[cached_mid]="#1C3773"
+theme[cached_end]="#1C3773"
+theme[available_start]="#516491"
+theme[available_mid]="#516491"
+theme[available_end]="#516491"
+
+# Red (Descarga / Subida)
+theme[download_start]="#516491"
+theme[download_mid]="#1C3773"
+theme[download_end]="#022164"
+theme[upload_start]="#516491"
+theme[upload_mid]="#1C3773"
+theme[upload_end]="#022164"
+
+# Lista de procesos
+theme[process_start]="#516491"
+theme[process_mid]="#1C3773"
+theme[process_end]="#022164"

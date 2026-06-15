@@ -1,0 +1,46 @@
+# ==========================================
+# Micro Theme: blueink
+# ==========================================
+
+# 1. Interface Base (Ink Base on Paper)
+color-link default "#022164,#E6DED5"
+
+# 2. Helix UI Mapping
+# Cursor: Paper text on Solid Ink Base block
+color-link cursor "#E6DED5,#022164"
+
+# Selection: Ink Base text on Paper Shadow block (Matches Helix selection)
+color-link selection ",#D4C9BC"
+
+# Hide the horizontal line highlight by forcing it to match the background
+color-link cursor-line ",#E6DED5"
+color-link color-column ",#E6DED5"
+
+# 3. TUI Elements
+color-link statusline "#E6DED5,#022164"
+color-link tabbar "#E6DED5,#022164"
+color-link line-number "#6C7AA0,#E6DED5"
+color-link current-line-number "#022164 bold,#E6DED5"
+
+# 4. Standard Syntax Hierarchy
+color-link identifier "#022164"
+color-link symbol "#022164"
+color-link statement "#022164 bold"
+color-link type "#022164 bold"
+color-link preproc "#1C3773"
+
+# Data & Secondary Context (Italics)
+color-link constant "#364D82 italic"
+color-link constant.string "#364D82 italic"
+color-link comment "#6C7AA0 italic"
+
+# Critical Control Breakpoints & Errors
+color-link special "#010B22 bold italic"
+color-link todo "#010B22 bold italic"
+color-link error "#010B22 bold"
+color-link underlined "#1C3773 underline"
+
+# Git Integration Gutter
+color-link diff-added "#516491"
+color-link diff-modified "#1C3773"
+color-link diff-deleted "#010B22"

@@ -1,0 +1,32 @@
+/* ==========================================
+   Estructura y Contenedores (Jerarquía Visual)
+   ========================================== */
+
+/* 1. Dibujar bordes en los contenedores estructurales principales */
+header, footer, section, article, aside, nav, main, dialog, form, fieldset {
+    border: 1px solid #1A2A54 !important;
+    border-radius: 0px !important; /* Esquinas estrictamente cuadradas */
+    margin: 2px !important; /* Evita que las líneas de dos cajas se fusionen */
+}
+
+/* 2. Cajas de código, citas y tablas */
+pre, code, blockquote, table, th, td {
+    border: 1px solid #1A2A54 !important;
+    padding: 4px !important;
+}
+
+/* 3. Elementos interactivos (Botones y campos de texto) */
+button, input, textarea, select {
+    border: 1px solid #1A2A54 !important;
+    background-color: #DCE4EC !important;
+    color: #1A2A54 !important;
+    border-radius: 0px !important;
+    padding: 2px 6px !important;
+    cursor: pointer !important;
+}
+
+/* 4. Efecto de "Tinta Invertida" al pasar el ratón (Hover) */
+button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #1A2A54 !important;
+    color: #DCE4EC !important;
+}
