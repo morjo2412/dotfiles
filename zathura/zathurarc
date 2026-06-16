@@ -1,0 +1,72 @@
+# =========================================================
+# ZATHURA THEME: BLUEINK
+# =========================================================
+
+# =========================================================
+# 1. RECOLORING - Archive
+# =========================================================
+set recolor                     "true"
+set recolor-reverse-video       "true"  
+set recolor-keephue             "false"
+
+# Reemplazo de colores en el PDF
+set recolor-lightcolor          "#E6DED5" # paper
+set recolor-darkcolor           "#022164" # ink_base
+
+# Pantalla de carga ("Loading...")
+set render-loading              "true"
+set render-loading-bg           "#E6DED5" # paper
+set render-loading-fg           "#022164" # ink_base
+
+# =========================================================
+# 2. GIRARA - Interface and State Bar
+# =========================================================
+set default-bg                  "#E6DED5" # paper
+set default-fg                  "#022164" # ink_base
+
+set statusbar-bg                "#D4C9BC" # paper_shadow
+set statusbar-fg                "#010B22" # ink_heavy
+
+# =========================================================
+# 3. Command Line and Autocompletation
+# =========================================================
+set inputbar-bg                 "#E6DED5" # paper
+set inputbar-fg                 "#022164" # ink_base
+
+set completion-bg               "#D4C9BC" # paper_shadow
+set completion-fg               "#022164" # ink_base
+set completion-group-bg         "#D4C9BC" # paper_shadow
+set completion-group-fg         "#1C3773" # ink_mid
+set completion-highlight-bg     "#022164" # ink_base
+set completion-highlight-fg     "#E6DED5" # paper
+
+# =========================================================
+# 4. Notifications
+# =========================================================
+set notification-bg             "#E6DED5" # paper
+set notification-fg             "#1C3773" # ink_mid
+set notification-warning-bg     "#1C3773" # ink_mid
+set notification-warning-fg     "#E6DED5" # paper
+set notification-error-bg       "#010B22" # ink_heavy
+set notification-error-fg       "#E6DED5" # paper
+
+# =========================================================
+# 5. INDEX MODE - Document Index
+# =========================================================
+set index-bg                    "#E6DED5" # paper
+set index-fg                    "#022164" # ink_base
+set index-active-bg             "#D4C9BC" # paper_shadow
+set index-active-fg             "#010B22" # ink_heavy
+
+# =========================================================
+# 6. HIGHLIGHTS
+# =========================================================
+
+# highlight-color -> paper_shadow (#D4C9BC) 50% opacity
+set highlight-color             "rgba(212,201,188,0.5)"
+
+# highlight-active-color -> ink_washed (#516491) 50% opacity
+set highlight-active-color      "rgba(81,100,145,0.5)"
+
+# Color del texto resaltado
+set highlight-fg                "#010B22" # ink_heavy
