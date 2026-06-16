@@ -10,3 +10,4 @@ ln -sf ~/.config/dotfiles/waybar ~/.config/waybar
 ln -sf ~/.config/dotfiles/fuzzel ~/.config/fuzzel
 ln -s ~/.config/dotfiles/qutebrowser ~/.config/qutebrowser
 ln -sf ~/.config/dotfiles/mako ~/.config/mako
+ln -sf ~/.config/dotfiles/zathura ~/.config/zathura
