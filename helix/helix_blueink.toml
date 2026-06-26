@@ -1,62 +1,137 @@
-# ==========================================
-# Helix Theme: blueink (Semantic Duotone)
-# ==========================================
+# Theme: BlueInk
+# Design: Monochromatic tonal environment optimized for Iosevka. 
+# Focuses syntax hierarchy on font anatomy instead of color shifts.
 
-# 1. User Interface (UI) - Mandatory Scopes
-"ui.background"         = { bg = "paper" }
-"ui.text"               = { fg = "ink_base" }
-"ui.cursor"             = { fg = "paper", bg = "ink_base" }
-"ui.cursor.primary"     = { fg = "paper", bg = "ink_base" }
-"ui.cursor.match"       = { fg = "ink_heavy", modifiers = ["underlined"] }
-"ui.selection"          = { bg = "paper_shadow" }
-"ui.selection.primary"  = { bg = "paper_shadow" }
-"ui.linenr"             = { fg = "ink_very_washed" }
-"ui.linenr.selected"    = { fg = "ink_base", modifiers = ["bold"] }
-"ui.statusline"         = { fg = "paper", bg = "ink_base" }
-"ui.menu"               = { fg = "ink_base", bg = "paper_shadow" }
-"ui.menu.selected"      = { fg = "paper", bg = "ink_base" }
-"ui.popup"              = { bg = "paper", fg = "ink_base" }
-"ui.window"             = { fg = "paper_shadow" }
-"ui.help"               = { fg = "ink_base", bg = "paper_shadow" }
+"ui.background" = { bg = "paper" }
+"ui.background.separator" = { fg = "paper_shadow" }
 
-# 2. Base Diagnostics (Required by linter)
+"ui.cursor" = { fg = "paper", bg = "ink_base" }
+"ui.cursor.match" = { fg = "paper", bg = "ink_mid" }
+"ui.cursor.primary" = { fg = "paper", bg = "ink_heavy" }
+
+"ui.linenr" = { fg = "ink_very_washed" }
+"ui.linenr.selected" = { fg = "ink_base", modifiers = ["bold"] }
+
+"ui.bufferline" = { fg = "ink_very_washed", bg = "paper_shadow" }
+"ui.bufferline.active" = { fg = "ink_base", bg = "paper", modifiers = ["bold"] }
+
+"ui.statusline" = { fg = "ink_base", bg = "paper_shadow" }
+"ui.statusline.inactive" = { fg = "ink_very_washed", bg = "paper_shadow" }
+"ui.statusline.normal" = { fg = "paper", bg = "ink_base", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "paper", bg = "ink_washed", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "paper", bg = "ink_mid", modifiers = ["bold"] }
+
+"ui.popup" = { fg = "ink_base", bg = "paper_shadow" }
+"ui.popup.info" = { fg = "ink_base", bg = "paper_shadow" }
+
+"ui.window" = { fg = "paper_shadow", bg = "paper" }
+"ui.help" = { fg = "ink_base", bg = "paper_shadow" }
+
+"ui.text" = { fg = "ink_base" }
+"ui.text.focus" = { bg = "paper_shadow" }
+"ui.text.info" = { fg = "ink_very_washed" }
+"ui.text.directory" = { fg = "ink_mid", modifiers = ["bold"] }
+
+"ui.virtual.jump-label" = { fg = "ink_heavy", modifiers = ["bold", "italic"] }
+"ui.virtual.ruler" = { bg = "paper_shadow" }
+"ui.virtual.whitespace" = { fg = "paper_shadow" }
+"ui.virtual.indent-guide" = { fg = "paper_shadow" }
+"ui.virtual.inlay-hint" = { fg = "ink_very_washed", modifiers = ["italic"] }
+
+"ui.menu" = { fg = "ink_base", bg = "paper_shadow" }
+"ui.menu.selected" = { fg = "paper", bg = "ink_base" }
+"ui.menu.scroll" = { fg = "ink_very_washed", bg = "ink_mid" }
+
+"ui.selection" = { bg = "paper_shadow" }
+"ui.selection.primary" = { bg = "paper_shadow" }
+
+"ui.cursorline.primary" = { bg = "paper_shadow" }
+"ui.cursorline.secondary" = { bg = "paper_shadow" }
+
 "warning" = "ink_mid"
-"error"   = "ink_heavy"
-"info"    = "ink_washed"
-"hint"    = "ink_very_washed"
+"error" = "ink_heavy"
+"info" = "ink_washed"
+"hint" = "ink_very_washed"
+"debug" = "ink_mid"
 
-# 3. Standard Syntax
-"variable"           = { fg = "ink_base" }
-"type"               = { fg = "ink_base" }
-"operator"           = { fg = "ink_base" }
+"diagnostic" = { underline = { color = "ink_very_washed", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "ink_very_washed", style = "curl" } }
+"diagnostic.info" = { underline = { color = "ink_washed", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "ink_mid", style = "curl" } }
+"diagnostic.error" = { underline = { color = "ink_heavy", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
 
-# 4. Structural Anchors (Bold)
-"keyword"            = { fg = "ink_base", modifiers = ["bold"] }
-"keyword.control"    = { fg = "ink_base", modifiers = ["bold"] }
-"function"           = { fg = "ink_base", modifiers = ["bold"] }
-"constructor"        = { fg = "ink_base", modifiers = ["bold"] }
+"special" = { fg = "ink_heavy", modifiers = ["bold"] }
+"attribute" = { fg = "ink_mid" }
 
-# 5. Data & Secondary Context (Italic)
-"string"             = { fg = "ink_washed", modifiers = ["italic"] }
-"comment"            = { fg = "ink_very_washed", modifiers = ["italic"] }
-"comment.line"       = { fg = "ink_very_washed", modifiers = ["italic"] }
+"type" = { fg = "ink_base" }
+"type.builtin" = { fg = "ink_base", modifiers = ["bold"] }
+"constructor" = { fg = "ink_base", modifiers = ["bold"] }
 
-# 6. Control Flow & Critical Breakpoints (Bold Italic)
+"constant" = "ink_base"
+"constant.builtin" = { fg = "ink_base", modifiers = ["bold"] }
+"constant.builtin.boolean" = { fg = "ink_base", modifiers = ["bold"] }
+"constant.character" = "ink_washed"
+"constant.character.escape" = { fg = "ink_heavy", modifiers = ["bold"] }
+"constant.numeric" = "ink_washed"
+
+"string" = { fg = "ink_washed", modifiers = ["italic"] }
+"string.regexp" = { fg = "ink_washed", modifiers = ["italic"] }
+"string.special.path" = { fg = "ink_washed", modifiers = ["underlined"] }
+"string.special.url" = { fg = "ink_washed", modifiers = ["underlined"] }
+
+"comment" = { fg = "ink_very_washed", modifiers = ["italic"] }
+"comment.block.documentation" = { fg = "ink_very_washed", modifiers = ["italic"] }
+
+"variable" = "ink_base"
+"variable.builtin" = { fg = "ink_base", modifiers = ["bold"] }
+"variable.parameter" = "ink_base"
+"variable.other.member" = "ink_base"
+
+"label" = { fg = "ink_mid", modifiers = ["bold"] }
+
+"punctuation" = "ink_very_washed"
+"punctuation.delimiter" = "ink_very_washed"
+"punctuation.bracket" = "ink_very_washed"
+
+"keyword" = { fg = "ink_base", modifiers = ["bold"] }
+"keyword.control" = { fg = "ink_base", modifiers = ["bold"] }
 "keyword.control.return" = { fg = "ink_heavy", modifiers = ["bold", "italic"] }
-"special"                = { fg = "ink_heavy", modifiers = ["bold", "italic"] }
+"keyword.control.exception" = { fg = "ink_heavy", modifiers = ["bold", "italic"] }
+"keyword.operator" = "ink_base"
+"keyword.directive" = { fg = "ink_mid", modifiers = ["bold"] }
 
-# 7. Compiler Diagnostics Details
-"diagnostic.error"   = { fg = "ink_heavy", modifiers = ["bold"] }
-"diagnostic.warning" = { fg = "ink_mid", modifiers = ["underlined"] }
+"operator" = "ink_base"
 
-# ==========================================
-# 8. Palette Definition (MUST BE AT THE BOTTOM)
-# ==========================================
+"function" = { fg = "ink_base", modifiers = ["bold"] }
+"function.builtin" = { fg = "ink_base", modifiers = ["bold"] }
+"function.macro" = { fg = "ink_heavy", modifiers = ["bold", "italic"] }
+
+"tag" = { fg = "ink_base", modifiers = ["bold"] }
+"namespace" = "ink_base"
+
+"markup.heading.marker" = { fg = "ink_very_washed", modifiers = ["bold"] }
+"markup.heading" = { fg = "ink_base", modifiers = ["bold"] }
+"markup.list" = "ink_base"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "ink_washed", modifiers = ["underlined"] }
+"markup.link.label" = "ink_mid"
+"markup.link.text" = "ink_base"
+"markup.quote" = { fg = "ink_washed", modifiers = ["italic"] }
+"markup.raw" = "ink_mid"
+
+"diff.plus" = "ink_washed"
+"diff.minus" = "ink_heavy"
+"diff.delta" = "ink_mid"
+
 [palette]
-paper          = "#E6DED5"
-paper_shadow   = "#D4C9BC"
-ink_base       = "#022164"
-ink_heavy      = "#010B22"
-ink_washed     = "#364D82"
+paper = "#E6DED5"
+paper_shadow = "#D4C9BC"
+ink_base = "#022164"
+ink_heavy = "#010B22"
+ink_washed = "#516491"
 ink_very_washed = "#6C7AA0"
-ink_mid        = "#1C3773"
+ink_mid = "#1C3773"

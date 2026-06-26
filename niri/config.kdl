@@ -10,6 +10,10 @@ spawn-at-startup "mako"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "DISPLAY" "XAUTHORITY"
 
+//cliphist
+spawn-at-startup "sh" "-c" "wl-paste --type text --watch cliphist store"
+spawn-at-startup "sh" "-c" "wl-paste --type image --watch cliphist store"
+
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Input
@@ -386,7 +390,16 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Mod+b hotkey-overlay-title="Open browser: qutebrowser" {spawn "qutebrowser";}
+    //open browser (qutebroser)
+    Mod+B hotkey-overlay-title="Open browser: qutebrowser" {spawn "qutebrowser";}
+    Mod+Shift+B hotkey-overlay-title="Open incognite browser: qutebrowser" {spawn-sh "qutebrowser -T";}
+
+    //open file manager (yazi)
+    Mod+E hotkey-overlay-title="Open file manager: yazi" {spawn-sh "kitty -e yazi";}
+
+    //Cliphist
+    Alt+V { spawn "bash" "-c" "item=$(cliphist list | fuzzel --dmenu --prompt '󰅇 : '); if [ -n \"$item\" ]; then echo \"$item\" | cliphist decode | wl-copy; sleep 0.1; wtype -M ctrl -k v -m ctrl; fi"; }
+    Alt+Shift+V { spawn "sh" "-c" "cliphist wipe"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -651,4 +664,6 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
+
+
 }
